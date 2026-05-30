@@ -1,4 +1,5 @@
 import EquipmentSlot from './EquipmentSlot'
+import CharacterPreview from './CharacterPreview'
 
 function EquipmentGrid({ equipment }) {
   return (
@@ -22,12 +23,7 @@ function EquipmentGrid({ equipment }) {
       <EquipmentSlot slot="pendant2" item={equipment.pendant2} style={{ gridColumn: 2, gridRow: 5 }} />
 
       {/* Columns 3-5, Rows 1-4 - Character Preview */}
-      <div style={{
-        gridColumn: '3 / 6',
-        gridRow: '1 / 5',
-      }} className="bg-gray-800 border border-gray-600 flex items-center justify-center">
-        <span className="text-gray-500 text-xs">Character Preview</span>
-      </div>
+      <CharacterPreview />
 
       {/* Column 3-5, Row 5 - Weapon, Secondary, Emblem */}
       <EquipmentSlot slot="weapon"    item={equipment.weapon}    style={{ gridColumn: 3, gridRow: 5 }} />
