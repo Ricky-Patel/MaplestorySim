@@ -1,6 +1,9 @@
-function EquipmentSlot({ slot, item }) {
+function EquipmentSlot({ slot, item, style }) {
   return (
-    <div className="w-12 h-12 bg-gray-800 border border-gray-600 flex items-center justify-center cursor-pointer hover:border-yellow-400 transition-colors">
+    <div
+      style={style}
+      className="w-12 h-12 bg-gray-800 border border-gray-600 flex items-center justify-center cursor-pointer hover:border-yellow-400 transition-colors"
+    >
       {item ? (
         <img
           src={`https://maplestory.io/api/GMS/253/item/${item.id}/icon`}
